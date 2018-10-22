@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.ini.rest.controller.UserController;
+import com.ini.rest.controller.ConsumerRemoteController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -22,7 +22,7 @@ public class HelloApplicationTests {
 
 	@Before
 	public void setUp() {
-		mvc = MockMvcBuilders.standaloneSetup(new UserController()).build();
+		mvc = MockMvcBuilders.standaloneSetup(new ConsumerRemoteController()).build();
 
 	}
 

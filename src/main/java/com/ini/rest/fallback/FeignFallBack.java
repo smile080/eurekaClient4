@@ -9,7 +9,7 @@ public class FeignFallBack implements ConsumerFeignService{
 
 	@Override
 	public String HelloService(String name) {
-		return null;
+		return " this is error";
 	}
  
 }
