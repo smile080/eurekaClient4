@@ -5,17 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ini.rest.service.ConsumerRmoteService;
+import com.ini.rest.service.ConsumerFeignService;
 
 @RestController
 public class ConsumerRemoteController {
 	
 	@Autowired
-	ConsumerRmoteService consumerRmoteService;
+	private ConsumerFeignService consumerFeignService;
 	
-    @RequestMapping(value="/ribbon-consumer-remote",method=RequestMethod.GET)
+    @RequestMapping(value="/feign-consumer",method=RequestMethod.GET)
     public String helloConsumer() {
-        return consumerRmoteService.service();
+    	String name ="123123";
+        return consumerFeignService.HelloService(name);
       
     }
+    
 }
