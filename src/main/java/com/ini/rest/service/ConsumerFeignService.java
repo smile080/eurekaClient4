@@ -11,6 +11,6 @@ import com.ini.rest.fallback.FeignFallBack;
 public interface ConsumerFeignService {
 
 	@RequestMapping(value="/hello",method=RequestMethod.GET)
-	public String HelloService(@RequestParam("personName") String name);
+	public String HelloService();
 	
 }

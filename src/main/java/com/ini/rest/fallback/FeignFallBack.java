@@ -8,7 +8,7 @@ import com.ini.rest.service.ConsumerFeignService;
 public class FeignFallBack implements ConsumerFeignService{
 
 	@Override
-	public String HelloService(String name) {
+	public String HelloService() {
 		return " this is error";
 	}
  

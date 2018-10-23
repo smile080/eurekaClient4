@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ini.rest.service.ConsumerFeignService;
+import com.ini.rest.service.impl.ConsumerFeignServiceImpl;
 
 @RestController
 public class ConsumerRemoteController {
 	
 	@Autowired
-	private ConsumerFeignService consumerFeignService;
+	private ConsumerFeignServiceImpl consumerFeignService;
 	
     @RequestMapping(value="/feign-consumer",method=RequestMethod.GET)
     public String helloConsumer() {
-    	String name ="123123";
-        return consumerFeignService.HelloService(name);
+        return consumerFeignService.HelloService();
       
     }
     
